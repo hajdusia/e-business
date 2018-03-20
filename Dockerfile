@@ -27,9 +27,9 @@ RUN apt-get install -y sbt
 # Set port
 EXPOSE 9000
 
-# Set the working directory to /app
-WORKDIR /app
+# Set the working directory to /home
+WORKDIR /home
 
 RUN git clone https://github.com/playframework/play-scala-slick-example
-WORKDIR /app/play-scala-slick-example
+WORKDIR /home/play-scala-slick-example
 CMD sbt run
